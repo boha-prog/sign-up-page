@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step-by-Step Sign Up</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+     <h1 class="form-title">Create Your Account</h1>
+  <div class="signup-container">
+   
+    <form id="signupForm">
+      <div class="step step-1">
+        <label for="name">What's your name?</label>
+        <input type="text" id="name" required autocomplete="off">
+        <div class="gender-group">
+          <span>Gender:</span>
+          <label><input type="radio" name="gender" value="male"> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+          <label><input type="radio" name="gender" value="other"> Other</label>
+        </div>
+        <label for="age">Age</label>
+        <input type="number" id="age" min="18" required autocomplete="off" placeholder="18+">
+        <div class="country-group">
+          <label for="country">Country</label>
+          <select id="country" required>
+            <option value="">Select your country</option>
+            <option value="US">United States</option>
+            <option value="DE">Germany</option>
+            <option value="FR">France</option>
+            <option value="UK">United Kingdom</option>
+            <option value="IN">India</option>
+            <option value="TN">Tunisia</option>
+            <option value="BR">Brazil</option>
+            <option value="CN">China</option>
+            <option value="JP">Japan</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <button type="button" id="nextToEmail">Next</button>
+      </div>
+      <div class="step step-2" style="display:none;">
+        <label for="email">Your email address</label>
+        <input type="email" id="email" required autocomplete="off">
+        <button type="button" id="nextToPassword">Next</button>
+      </div>
+      <div class="step step-3" style="display:none;">
+        <label for="password">Create a password</label>
+        <input type="password" id="password" required>
+        <button type="submit">Sign Up</button>
+      </div>
+    </form>
+    <div class="thankyou-message" style="display:none;"></div>
+  </div>
+  <script src="signup.js"></script>
+</body>
+</html>
